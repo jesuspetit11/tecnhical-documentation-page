@@ -1,0 +1,126 @@
+:root{
+    --color-primary:wheat;
+    --sec-color:#00334e;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+section{
+    margin-bottom: 10px;
+}
+
+body{
+    background-color: var(--sec-color);
+}
+
+/*estilos del aside*/
+nav{
+
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        box-sizing: border-box;
+}
+header.first{
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+ul.enlaces > li{
+    padding: 10px 30px;
+    border: 2px solid wheat;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/*estilos del main*/
+header{
+    font-size: 3rem;
+    padding-bottom: 15px;
+    font-family: 'IM Fell English SC', serif;
+    color: var(--color-primary);
+}
+section{
+    text-align: justify;
+    margin-bottom: 50px;
+}
+body{
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+p{
+    padding-left: 30px;
+    padding-bottom: 30px;
+    line-height: 25px;
+}
+ul.cursive{
+    font-style: italic;
+    padding-left: 70px;
+    line-height: 30px;
+}
+ul.text{
+    padding-left: 70px;
+    line-height: 30px;
+}
+
+/*estilo de enlaces*/
+a{
+    color: #a98c66;
+    text-decoration: none;
+}
+a:active{
+    color: wheat;
+}
+
+
+
+/* css grid*/
+div.grid{
+    display: grid;
+    width: 99%;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 30px;
+    grid-template-areas: " aside main";
+}
+aside{
+    grid-area: aside;
+}
+main{
+    grid-area: main;
+}
+
+
+/* grid responsive */
+
+@media (max-width:1011px) {
+    div.grid{
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        "aside aside"
+        "main main";
+        grid-row-gap: 20px;
+    }
+    nav{
+        height: 200px;
+        overflow: auto;
+    } 
+    p{
+        text-align: center;
+        padding: 0px;
+    }
+    header{
+        text-align: center;
+    }
+    ul.text{
+        padding: 20px;
+    }
+    ul.cursive.text{
+        padding: 20px;
+        text-align: center;
+        list-style: none;
+    }
+}
